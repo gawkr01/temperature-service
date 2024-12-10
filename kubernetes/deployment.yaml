@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: temperature-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: temperature-service
+  template:
+    metadata:
+      labels:
+        app: temperature-service
+    spec:
+      containers:
+      - name: temperature-service
+        image: your-registry/temperature-service:latest
+        ports:
+        - containerPort: 8000
