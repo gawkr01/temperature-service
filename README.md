@@ -90,4 +90,7 @@ My CI/CD idea is:
     On every pull request, run pytest to ensure all tests pass before merging.
     On merge to the main branch, build and push the Docker image, then apply the Kubernetes manifests.
     
+HEAD
 You can set this up with any CI/CD tool you prefer.
+
+
